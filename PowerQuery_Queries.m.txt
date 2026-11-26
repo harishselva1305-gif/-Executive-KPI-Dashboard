@@ -1,0 +1,159 @@
+// =====================================================================
+//  EXECUTIVE KPI DASHBOARD - POWER QUERY (M) SCRIPTS
+//  Power BI Desktop > Home > Transform data > Power Query Editor
+//  Each "// QUERY:" block = one blank query (Home > New Source > Blank Query > Advanced Editor)
+// =====================================================================
+
+// ---------------------------------------------------------------------
+// QUERY: pDataFolder   (Parameter - Text, e.g. C:\PowerBI\csv\ )
+// Manage Parameters > New > Name pDataFolder > Type Text > Current Value = your csv folder path (ends with \)
+// ---------------------------------------------------------------------
+"C:\PowerBI\csv\" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+
+// ---------------------------------------------------------------------
+// QUERY: Dim_Product
+// ---------------------------------------------------------------------
+let
+    Source  = Csv.Document(File.Contents(pDataFolder & "Dim_Product.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+    Typed   = Table.TransformColumnTypes(Headers, {{"ProductID", type text}, {"ProductName", type text}, {"Category", type text}, {"UnitPrice", Currency.Type}, {"UnitCost", Currency.Type}})
+in
+    Typed
+
+// ---------------------------------------------------------------------
+// QUERY: Dim_SalesRep
+// ---------------------------------------------------------------------
+let
+    Source  = Csv.Document(File.Contents(pDataFolder & "Dim_SalesRep.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+    Typed   = Table.TransformColumnTypes(Headers, {{"RepID", type text}, {"RepName", type text}, {"Region", type text}})
+in
+    Typed
+
+// ---------------------------------------------------------------------
+// QUERY: Dim_Customer
+// ---------------------------------------------------------------------
+let
+    Source  = Csv.Document(File.Contents(pDataFolder & "Dim_Customer.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+    Typed   = Table.TransformColumnTypes(Headers, {{"CustomerID", type text}, {"CustomerName", type text}, {"Segment", type text}, {"City", type text}})
+in
+    Typed
+
+// ---------------------------------------------------------------------
+// QUERY: Dim_Region
+// ---------------------------------------------------------------------
+let
+    Source  = Csv.Document(File.Contents(pDataFolder & "Dim_Region.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+    Typed   = Table.TransformColumnTypes(Headers, {{"Region", type text}, {"HQCity", type text}, {"RegionalHead", type text}})
+in
+    Typed
+
+// ---------------------------------------------------------------------
+// QUERY: Dim_Date   (generated in M - no csv needed; or load Dim_Date.csv instead)
+// ---------------------------------------------------------------------
+let
+    StartDate = #date(2024,1,1),
+    EndDate   = #date(2026,12,31),
+    Days      = Duration.Days(EndDate - StartDate) + 1,
+    DateList  = List.Dates(StartDate, Days, #duration(1,0,0,0)),
+    ToTable   = Table.FromList(DateList, Splitter.SplitByNothing(), {"Date"}, null, ExtraValues.Error),
+    Typed     = Table.TransformColumnTypes(ToTable, {{"Date", type date}}),
+    Year      = Table.AddColumn(Typed,  "Year",          each Date.Year([Date]), Int64.Type),
+    Quarter   = Table.AddColumn(Year,   "Quarter",       each "Q" & Text.From(Date.QuarterOfYear([Date])), type text),
+    MonthNum  = Table.AddColumn(Quarter,"MonthNum",      each Date.Month([Date]), Int64.Type),
+    MonthName = Table.AddColumn(MonthNum,"MonthName",    each Date.ToText([Date], "MMM"), type text),
+    YearMonth = Table.AddColumn(MonthName,"YearMonth",   each Date.ToText([Date], "yyyy-MM"), type text),
+    DayName   = Table.AddColumn(YearMonth,"DayName",     each Date.ToText([Date], "ddd"), type text),
+    IsWeekend = Table.AddColumn(DayName,"IsWeekend",     each Date.DayOfWeek([Date], Day.Monday) >= 5, type logical),
+    FiscalYr  = Table.AddColumn(IsWeekend,"FiscalYear",  each "FY" & Text.From(if [MonthNum] >= 4 then [Year] + 1 else [Year]), type text),
+    FiscalQtr = Table.AddColumn(FiscalYr,"FiscalQuarter",each "FQ" & Text.From(Number.IntegerDivide(Number.Mod([MonthNum] - 4, 12), 3) + 1), type text)
+in
+    FiscalQtr
+
+// ---------------------------------------------------------------------
+// QUERY: Fact_Targets
+// ---------------------------------------------------------------------
+let
+    Source  = Csv.Document(File.Contents(pDataFolder & "Fact_Targets.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+    Typed   = Table.TransformColumnTypes(Headers, {{"Month", type date}, {"Region", type text}, {"TargetRevenue", Currency.Type}}, "en-US")
+in
+    Typed
+
+// ---------------------------------------------------------------------
+// QUERY: Fact_Sales   (reads DIRTY Raw_Sales.csv and does ALL cleaning)
+// Depends on: Dim_Product, Dim_SalesRep  (queries above)
+// ---------------------------------------------------------------------
+let
+    Source   = Csv.Document(File.Contents(pDataFolder & "Raw_Sales.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+    Headers  = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+
+    // 1. remove exact duplicates
+    Dedup    = Table.Distinct(Headers),
+
+    // 2. trim + clean every text column
+    TrimCols = Table.TransformColumns(Dedup, {{"OrderID", each Text.Trim(Text.Clean(_)), type text},
+                                              {"CustomerID", each Text.Upper(Text.Trim(_)), type text},
+                                              {"ProductID", each Text.Upper(Text.Trim(_)), type text},
+                                              {"SalesRep", each Text.Proper(Text.Trim(_)), type text}}),
+
+    // 3. standardise labels (first-letter logic handles lower/UPPER/typos/spaces)
+    fnRegion  = (t as nullable text) as nullable text =>
+        if t = null or Text.Trim(t) = "" then null else
+        let u = Text.Upper(Text.Trim(t)) in
+            if Text.StartsWith(u,"S") then "South" else if Text.StartsWith(u,"N") then "North"
+            else if Text.StartsWith(u,"E") then "East" else if Text.StartsWith(u,"W") then "West"
+            else if Text.StartsWith(u,"C") then "Central" else null,
+    fnChannel = (t as nullable text) as text =>
+        if t = null or Text.Trim(t) = "" then "Unknown" else
+        let u = Text.Upper(Text.Trim(t)) in
+            if Text.StartsWith(u,"O") then "Online" else if Text.StartsWith(u,"R") then "Retail"
+            else if Text.StartsWith(u,"P") then "Partner" else "Unknown",
+    fnStatus  = (t as nullable text) as nullable text =>
+        if t = null then null else
+        let u = Text.Upper(Text.Trim(t)) in
+            if Text.StartsWith(u,"CO") then "Completed" else if Text.StartsWith(u,"CA") then "Cancelled"
+            else if Text.StartsWith(u,"R") then "Returned" else null,
+    Labels   = Table.TransformColumns(TrimCols, {{"Region", fnRegion, type text}, {"Channel", fnChannel, type text}, {"Status", fnStatus, type text}}),
+
+    // 4. dates - 3 mixed formats (yyyy-MM-dd, dd/MM/yyyy, dd-MMM-yyyy)
+    Dates    = Table.TransformColumns(Labels, {{"OrderDate", each try Date.FromText(Text.Trim(_), [Format = if Text.Contains(_, "-") and Text.Length(Text.BeforeDelimiter(_, "-")) = 4 then "yyyy-MM-dd" else if Text.Contains(_, "/") then "dd/MM/yyyy" else "dd-MMM-yyyy", Culture="en-US"]) otherwise null, type date}}),
+
+    // 5. UnitPrice: remove rupee symbol + commas
+    Price    = Table.TransformColumns(Dates, {{"UnitPrice", each try Number.FromText(Text.Remove(Text.From(_), {"₹", ",", " "}), "en-US") otherwise null, type number}}),
+
+    // 6. DiscountPct: "10%" / 10 / 0.1  ->  0.10
+    Disc     = Table.TransformColumns(Price, {{"DiscountPct", each
+                    let n = try Number.FromText(Text.Remove(Text.From(_), {"%", " "}), "en-US") otherwise 0
+                    in if n >= 1 then n / 100 else n, type number}}),
+
+    // 7. Quantity: numeric, drop missing, negative -> abs, drop outliers > 100
+    Qty0     = Table.TransformColumns(Disc, {{"Quantity", each try Number.FromText(Text.From(_), "en-US") otherwise null, type number}}),
+    QtyNN    = Table.SelectRows(Qty0, each [Quantity] <> null),
+    QtyAbs   = Table.TransformColumns(QtyNN, {{"Quantity", each Number.Abs(_), Int64.Type}}),
+    QtyOK    = Table.SelectRows(QtyAbs, each [Quantity] <= 100),
+
+    // 8. fill missing UnitPrice from Dim_Product
+    JoinP    = Table.NestedJoin(QtyOK, {"ProductID"}, Dim_Product, {"ProductID"}, "P", JoinKind.LeftOuter),
+    ExpP     = Table.ExpandTableColumn(JoinP, "P", {"UnitPrice"}, {"ListPrice"}),
+    FillPr   = Table.AddColumn(ExpP, "UnitPrice2", each if [UnitPrice] = null then [ListPrice] else [UnitPrice], type number),
+    DropPr   = Table.RemoveColumns(FillPr, {"UnitPrice", "ListPrice"}),
+    RenPr    = Table.RenameColumns(DropPr, {{"UnitPrice2", "UnitPrice"}}),
+
+    // 9. map SalesRep -> RepID and fill missing Region from rep territory
+    JoinR    = Table.NestedJoin(RenPr, {"SalesRep"}, Dim_SalesRep, {"RepName"}, "R", JoinKind.LeftOuter),
+    ExpR     = Table.ExpandTableColumn(JoinR, "R", {"RepID", "Region"}, {"RepID", "RepRegion"}),
+    FillReg  = Table.AddColumn(ExpR, "Region2", each if [Region] = null then [RepRegion] else [Region], type text),
+    Drop2    = Table.RemoveColumns(FillReg, {"Region", "RepRegion", "SalesRep"}),
+    RenReg   = Table.RenameColumns(Drop2, {{"Region2", "Region"}}),
+
+    // 10. final column order + types, sort
+    Reorder  = Table.ReorderColumns(RenReg, {"OrderID","OrderDate","CustomerID","ProductID","RepID","Region","Channel","Status","Quantity","UnitPrice","DiscountPct"}),
+    Final    = Table.TransformColumnTypes(Reorder, {{"OrderID", type text}, {"OrderDate", type date}, {"CustomerID", type text}, {"ProductID", type text},
+                                                    {"RepID", type text}, {"Region", type text}, {"Channel", type text}, {"Status", type text},
+                                                    {"Quantity", Int64.Type}, {"UnitPrice", Currency.Type}, {"DiscountPct", Percentage.Type}}),
+    Sorted   = Table.Sort(Final, {{"OrderDate", Order.Ascending}})
+in
+    Sorted

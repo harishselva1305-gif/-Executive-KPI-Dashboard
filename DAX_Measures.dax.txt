@@ -1,0 +1,136 @@
+// =====================================================================
+//  EXECUTIVE KPI DASHBOARD - DAX
+//  Model: Dim_Date[Date] 1-*  Fact_Sales[OrderDate]
+//         Dim_Product[ProductID] 1-* Fact_Sales[ProductID]
+//         Dim_Customer[CustomerID] 1-* Fact_Sales[CustomerID]
+//         Dim_SalesRep[RepID] 1-* Fact_Sales[RepID]
+//         Dim_Region[Region] 1-* Fact_Sales[Region]  and  1-* Fact_Targets[Region]
+//         Dim_Date[Date] 1-* Fact_Targets[Month]   (Month = 1st of month)
+//  Table tools > Mark as date table > Dim_Date[Date]   (REQUIRED for time intelligence)
+//  Create a table "_Measures" (Enter Data, blank) and keep all measures there.
+// =====================================================================
+
+// ------------------------------------------------------------------
+// 1. CALCULATED COLUMNS  (row context, stored in the model)
+// ------------------------------------------------------------------
+// Fact_Sales
+Gross Amount   = Fact_Sales[Quantity] * Fact_Sales[UnitPrice]
+Net Amount     = Fact_Sales[Gross Amount] * ( 1 - Fact_Sales[DiscountPct] )
+Unit Cost      = RELATED ( Dim_Product[UnitCost] )                 // row context + relationship
+Total Cost     = Fact_Sales[Quantity] * Fact_Sales[Unit Cost]
+Profit Amount  = Fact_Sales[Net Amount] - Fact_Sales[Total Cost]
+
+// Dim_Customer  - CONTEXT TRANSITION: CALCULATE turns the current row into a filter
+Customer Sales = CALCULATE ( SUM ( Fact_Sales[Net Amount] ), Fact_Sales[Status] = "Completed" )
+Customer Tier  =
+    SWITCH ( TRUE (),
+        Dim_Customer[Customer Sales] >= 1000000, "Platinum",
+        Dim_Customer[Customer Sales] >= 400000,  "Gold",
+        Dim_Customer[Customer Sales] > 0,        "Silver",
+        "No Sales" )
+
+// Calculated column vs Measure - the SAME idea:
+//   column  = evaluated row-by-row at refresh, uses memory, can be used on axis / slicer
+//   measure = evaluated at query time in the filter context of the visual, no storage, reacts to slicers
+
+// ------------------------------------------------------------------
+// 2. BASE MEASURES  (CALCULATE & FILTER)
+// ------------------------------------------------------------------
+Net Sales =
+CALCULATE ( SUM ( Fact_Sales[Net Amount] ), Fact_Sales[Status] = "Completed" )
+
+Net Sales (FILTER version) =                      // same result, FILTER = iterator, row context inside
+CALCULATE ( SUM ( Fact_Sales[Net Amount] ), FILTER ( Fact_Sales, Fact_Sales[Status] = "Completed" ) )
+
+Net Sales (SUMX version) =                        // iterator: row context created by SUMX itself
+SUMX ( FILTER ( Fact_Sales, Fact_Sales[Status] = "Completed" ), Fact_Sales[Quantity] * Fact_Sales[UnitPrice] * ( 1 - Fact_Sales[DiscountPct] ) )
+
+Total Cost    = CALCULATE ( SUM ( Fact_Sales[Total Cost] ), Fact_Sales[Status] = "Completed" )
+Gross Profit  = [Net Sales] - [Total Cost]
+Profit Margin % = DIVIDE ( [Gross Profit], [Net Sales] )
+Orders        = CALCULATE ( DISTINCTCOUNT ( Fact_Sales[OrderID] ), Fact_Sales[Status] = "Completed" )
+Units Sold    = CALCULATE ( SUM ( Fact_Sales[Quantity] ), Fact_Sales[Status] = "Completed" )
+Avg Order Value = DIVIDE ( [Net Sales], [Orders] )
+Active Customers = CALCULATE ( DISTINCTCOUNT ( Fact_Sales[CustomerID] ), Fact_Sales[Status] = "Completed" )
+Cancelled Orders = CALCULATE ( DISTINCTCOUNT ( Fact_Sales[OrderID] ), Fact_Sales[Status] = "Cancelled" )
+Return Rate %    = DIVIDE ( CALCULATE ( DISTINCTCOUNT ( Fact_Sales[OrderID] ), Fact_Sales[Status] = "Returned" ), DISTINCTCOUNT ( Fact_Sales[OrderID] ) )
+
+// Filter manipulation
+Sales All Regions   = CALCULATE ( [Net Sales], ALL ( Dim_Region ) )
+Region Share %      = DIVIDE ( [Net Sales], [Sales All Regions] )
+Sales Online Only   = CALCULATE ( [Net Sales], Fact_Sales[Channel] = "Online" )
+Sales Ignore Slicer = CALCULATE ( [Net Sales], REMOVEFILTERS ( Dim_Date ) )
+Sales Keep Category = CALCULATE ( [Net Sales], ALLEXCEPT ( Dim_Product, Dim_Product[Category] ) )
+Large Orders Sales  = CALCULATE ( [Net Sales], FILTER ( Fact_Sales, Fact_Sales[Net Amount] > 100000 ) )
+
+// ------------------------------------------------------------------
+// 3. ROW CONTEXT vs FILTER CONTEXT demo measures
+// ------------------------------------------------------------------
+// Wrong (no row context in a measure):   Bad = Fact_Sales[Net Amount]        -> ERROR
+// Row context via iterator:
+Avg Line Value = AVERAGEX ( Fact_Sales, Fact_Sales[Net Amount] )
+// Filter context + iterator over a dimension:
+Avg Sales per Customer = AVERAGEX ( VALUES ( Dim_Customer[CustomerID] ), [Net Sales] )   // [Net Sales] auto-CALCULATE = context transition
+Best Month Sales       = MAXX ( VALUES ( Dim_Date[YearMonth] ), [Net Sales] )
+
+// ------------------------------------------------------------------
+// 4. TIME INTELLIGENCE  (YTD / MTD / QTD / YoY)
+// ------------------------------------------------------------------
+Sales YTD  = TOTALYTD ( [Net Sales], Dim_Date[Date] )
+Sales QTD  = TOTALQTD ( [Net Sales], Dim_Date[Date] )
+Sales MTD  = TOTALMTD ( [Net Sales], Dim_Date[Date] )
+Sales FY YTD = TOTALYTD ( [Net Sales], Dim_Date[Date], "3/31" )       // Apr-Mar fiscal year (India)
+
+Sales PY       = CALCULATE ( [Net Sales], SAMEPERIODLASTYEAR ( Dim_Date[Date] ) )
+Sales PY YTD   = CALCULATE ( [Sales YTD], SAMEPERIODLASTYEAR ( Dim_Date[Date] ) )
+Sales PM       = CALCULATE ( [Net Sales], DATEADD ( Dim_Date[Date], -1, MONTH ) )
+Sales PQ       = CALCULATE ( [Net Sales], DATEADD ( Dim_Date[Date], -1, QUARTER ) )
+
+YoY Growth     = [Net Sales] - [Sales PY]
+YoY Growth %   = DIVIDE ( [Net Sales] - [Sales PY], [Sales PY] )
+YTD vs PY YTD %= DIVIDE ( [Sales YTD] - [Sales PY YTD], [Sales PY YTD] )
+MoM Growth %   = DIVIDE ( [Net Sales] - [Sales PM], [Sales PM] )
+Rolling 3M Sales = CALCULATE ( [Net Sales], DATESINPERIOD ( Dim_Date[Date], MAX ( Dim_Date[Date] ), -3, MONTH ) )
+Running Total    = CALCULATE ( [Net Sales], FILTER ( ALL ( Dim_Date ), Dim_Date[Date] <= MAX ( Dim_Date[Date] ) ) )
+
+// ------------------------------------------------------------------
+// 5. TARGET vs ACTUAL  (KPI)
+// ------------------------------------------------------------------
+Target Revenue   = SUM ( Fact_Targets[TargetRevenue] )
+Achievement %    = DIVIDE ( [Net Sales], [Target Revenue] )
+Variance to Target = [Net Sales] - [Target Revenue]
+KPI Status =
+    SWITCH ( TRUE (), [Achievement %] >= 1, "On Target", [Achievement %] >= 0.9, "Watch", "Behind" )
+KPI Color =
+    SWITCH ( TRUE (), [Achievement %] >= 1, "#2E7D32", [Achievement %] >= 0.9, "#F9A825", "#C62828" )   // use in Conditional formatting > Field value
+KPI Arrow = IF ( [YoY Growth %] >= 0, "▲ ", "▼ " ) & FORMAT ( ABS ( [YoY Growth %] ), "0.0%" )
+
+// ------------------------------------------------------------------
+// 6. DYNAMIC DASHBOARD  (disconnected selector table + SWITCH)
+// ------------------------------------------------------------------
+// Create table:  Metric Selector = DATATABLE ( "Metric", STRING, "Order", INTEGER,
+//                   { {"Net Sales",1}, {"Gross Profit",2}, {"Orders",3}, {"Units Sold",4}, {"Avg Order Value",5} } )
+// Use Metric Selector[Metric] as a slicer (Single select).
+Selected Metric =
+SWITCH ( SELECTEDVALUE ( 'Metric Selector'[Metric], "Net Sales" ),
+    "Net Sales",       [Net Sales],
+    "Gross Profit",    [Gross Profit],
+    "Orders",          [Orders],
+    "Units Sold",      [Units Sold],
+    "Avg Order Value", [Avg Order Value] )
+
+Dynamic Title = "Executive KPI - " & SELECTEDVALUE ( 'Metric Selector'[Metric], "Net Sales" ) & " | " &
+                IF ( ISFILTERED ( Dim_Region[Region] ), CONCATENATEX ( VALUES ( Dim_Region[Region] ), Dim_Region[Region], ", " ), "All Regions" )
+
+// Period selector (Table: Period Selector = {"MTD","QTD","YTD","Rolling 3M"})
+Sales by Period =
+SWITCH ( SELECTEDVALUE ( 'Period Selector'[Value], "YTD" ),
+    "MTD", [Sales MTD], "QTD", [Sales QTD], "YTD", [Sales YTD], "Rolling 3M", [Rolling 3M Sales] )
+
+// Top N (works with a "Top N" what-if parameter)
+Top N Product Sales =
+VAR _n = SELECTEDVALUE ( 'Top N'[Top N], 5 )
+VAR _rank = RANKX ( ALLSELECTED ( Dim_Product[ProductName] ), [Net Sales], , DESC )
+RETURN IF ( _rank <= _n, [Net Sales] )
+
+Last Data Date = MAX ( Fact_Sales[OrderDate] )

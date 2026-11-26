@@ -1,0 +1,513 @@
+﻿OrderID,OrderDate,CustomerID,ProductID,SalesRep,Region,Channel,Status,Quantity,UnitPrice,DiscountPct
+ORD-10228,2026-11-04,C029,P14,Anil Gupta,West,Online ,Cancelled,12,8500.0,0
+ORD-10099,2025-10-30,C042,P14,pooja desai,West,Retail,Completed,3,8670.0,0.2
+ORD-10470,2024-02-15,c010,P18,Suresh Babu,South,Partner,Completed,7,9800.0,10
+ORD-10041,2025-03-18,C007,P13,Priya Nair, North,Partner,Completed,1,54000.0,5%
+ORD-10457,01-Nov-2024,C008,P20,Sneha Roy,East,retail,Completed,14,7800.0,10%
+ORD-10294,2024-08-05,C044,P04,Meera Joshi,WEST ,Retail,Completed,13,882.0,0.0
+ORD-10140,2024-09-04,C018,P12,Rahul Banerjee,East,Online,completed,5,16116.0,0.1
+ORD-10452,20/11/2025,C041,P09,Vikram Singh,North,Online,Completed,1,11200.0,5
+ORD-10343,2026-06-25,c028,P06,Deepak Verma,Central,Partner ,Completed,10,2100.0,5
+ORD-10076,2025-01-13,C050,P07,Lakshmi Narayan,Central,Partner,Completed,8,"₹2,856",0.0
+ORD-10164,07/05/2026,C023,P11,Lakshmi Narayan,Central,partner,Completed,13,6400.0,0
+ORD-10051,2026-09-29,C034,P05,Sneha Roy,East,Partner,Completed,-15,"₹3,200",5
+ORD-10273,2024-08-01,c024,P07,  Anil Gupta,West,Retail,completed,4,2800.0,0
+ORD-10477,18/03/2025,c032,P16,Lakshmi Narayan,Central,Retail,Returned,,6000.0,15
+ORD-10353,22-Mar-2025,C025,P07,Farah Khan,Central,Online,Completed,14,2800.0,10
+ORD-10239,26-Jun-2024,C003,P12,Deepak Verma,Central,Retail,Completed,4,15800.0,15
+ORD-10462,27/05/2025,C004,P05,Divya Lakshmi,South,Retail,COMPLETED,9,3200.0,15
+ORD-10276,28/08/2026,C040,P10,Farah Khan,Central,Online ,Completed,4,28910.0,15%
+ORD-10332,25-Jun-2024,C011,P20,Anil Gupta,West,,Completed ,10,7800.0,5
+ORD-10411,2024-10-09,C033,P07,  Divya Lakshmi,,Online,Completed,12,"₹2,856",0
+ORD-10117,23/02/2025,C004,P07,  Pooja Desai,west,Partner,Completed,12,2800.0,20
+ORD-10323,2024-08-10,C054,P10,Amit Patil,West,Online,Completed,1,29500.0,10
+ORD-10219,03/01/2026,C016,P20,Amit Patil,West,Online,Completed,8,7956.0,20%
+ORD-10495,09/06/2026,C031,P11,Arjun Mehta,North,Retail,Completed,16,6272.0,0.15
+ORD-10391,2025-06-25,C004,P07,PRIYA NAIR, North,Retial,Completed,13,2800.0,10
+ORD-10057,23-Jul-2025,C052,P11,  Divya Lakshmi,South,PARTNER,Completed,13,6400.0,0
+ORD-10360,12-Oct-2024,C026,P09,farah khan,Central,Online,Completed,7,11424.0,10
+ORD-10185,2026-04-16,C026,P03,Arjun Mehta,north,Online,Completed,2,41000.0,15
+ORD-10415,2026-02-08,C054,P01,Sneha Roy,East,Partner,Completed,4,63240.0,15%
+ORD-10135,24-May-2025,C034,P10,Divya Lakshmi, South,Partner,Completed,2,29500.0,0%
+ORD-10334,2024-08-03,C004,P05,Priya Nair,North,Partner,Completed,7,3200.0,5
+ORD-10344,2026-03-21,C033,P18,Priya Nair,North,Retail,Completed,14,9996.0,5%
+ORD-10289,23/10/2026,C058,P14,Farah Khan,Central,Retail,Completed,11,8500.0,5
+ORD-10177,27-Jun-2024,C018,P04,Vikram Singh,North,Retail,Completed,11,918.0,0
+ORD-10038,2024-01-13,C006,P20,Vikram Singh,North,Online,COMPLETED,16,7956.0,0.0
+ORD-10324,2024-06-13,C033,P17,Pooja Desai,West,Partner,Completed,4,16170.0,20%
+ORD-10345,2026-05-28,C002,P16,Meera Joshi,West,Partner,Completed,10,5880.0,0
+ORD-10112,14/06/2026,C047,P14,Arjun Mehta,North,Retail,Completed,9,8500.0,5%
+ORD-10485,23-Jul-2026,C029,P07,Farah Khan,Central,Online,Completed,13,"₹2,744",0%
+ORD-10417,27/07/2024,C010,P04,Suresh Babu,South,Online,completed,13,918.0,20
+ORD-10459,2025-05-18,C053,P15,VIKRAM SINGH,North,Online,completed,10,2400.0,0.0
+ORD-10427,08-Feb-2026,C005,P05,Suresh Babu,South,Retail ,completed,9,3200.0,10%
+ORD-10403,14-Oct-2026,C032,P01,Anil Gupta,West,Online,Completed,4,62000.0,0
+ORD-10384,08-Apr-2026,C045,P16,Amit Patil,West,Online,Completed,13,6000.0,0
+ORD-10451,01-Mar-2026,C026,P03,Karthik Raja,South,Online,completed,2,41820.0,0
+ORD-10132,2026-01-28,C018,P04,pooja desai,West,Retail,Completed,10,882.0,0.1
+ORD-10450,2026-10-24,C051,P05,Amit Patil,West,Retail,Cancelled,14,3200.0,20
+ORD-10313,15/04/2024,C046,P09,  Karthik Raja, South,Retail,Completed,3,11200.0,0
+ORD-10100,2025-07-19,C022,P04,Arjun Mehta,North,Retail,Completed,17,900.0,0.05
+ORD-10156,2026-07-22,C013,P18,Sneha Roy,EAST ,Partner,Completed,13,9800.0,10
+ORD-10405,21/12/2025,C057,P08,Deepak Verma,CENTRAL ,Retail,Completed,2,18500.0,0.05
+ORD-10301,2025-02-28, C033 ,P09,Anil Gupta,West,Online,Completed,2,11200.0,0
+ORD-10305,08/08/2025,C059,P06,Anil Gupta,West,Retail,Completed,12,2100.0,0.15
+ORD-10154,2026-04-27,c001,P04,anil gupta,West,Online,Cancelled,14,900.0,5
+ORD-10296,2026-07-03,C046,P14,Priya Nair,North,Online,Completed,12,8500.0,0.0
+ORD-10146,10-Sep-2024,c002,P15,Rahul Banerjee,East,Retail ,Completed ,8,"₹2,400",5
+ORD-10361,15/06/2024, C040 ,P15,Anil Gupta,West,ONLINE,Completed,18,"₹2,352",5
+ORD-10423,2026-08-05,C025,P11,  Sneha Roy,East,Online,Completed,9,"₹6,528",5
+ORD-10307,11/07/2025,C029,P08,Arjun Mehta,North,Online,Completed,2,18500.0,0
+ORD-10484,03-Jul-2025,C053,P16,Karthik Raja  ,South,Retail,completed,12,6000.0,5
+ORD-10358,02/01/2026, C060 ,P07,Meera Joshi,West,Online,Completed,11,2800.0,0
+ORD-10035,06-Apr-2024,C016,P05,Karthik Raja,South,Retail,completed,15,3136.0,20
+ORD-10158,02/06/2026,C057,P04,Rahul Banerjee  ,east,Partner,Completed,13,918.0,20
+ORD-10245,09-Jun-2024,C009,P14,Deepak Verma,Central,Retail,Completed,11,"₹8,500",10
+ORD-10473,2025-10-18,C002,P12,Vikram Singh,North,Retail,Completed,1,16116.0,0
+ORD-10262,2026-02-10,C030,P01,Anil Gupta,West,Retail,Completed,999,62000.0,5
+ORD-10278,12/07/2025,c009,P16,Amit Patil,West,Online,Completed,7,6000.0,0
+ORD-10237,2026-08-30,C004,P04,Karthik Raja, South,Retail,Completed,10,918.0,0
+ORD-10029,23/06/2024,C057,P15,Deepak Verma,Central,Online,Completed,17,"₹2,400",0
+ORD-10044,25/03/2024,C039,P15,Lakshmi Narayan  ,Central,Partne,completed,,2400.0,0.15
+ORD-10072,26/12/2024,C055,P07,Priya Nair, North,Retail,Completed,5,2856.0,0.15
+ORD-10442,2024-07-05,C037,P16,Lakshmi Narayan,Central,Retail,Cancelled ,9,6000.0,0
+ORD-10474,2025-02-14,C002,P15,Vikram Singh,North,retail,Completed,11,2448.0,0
+ORD-10331,2025-12-18,C011,P18,Pooja Desai,West,Online,Cancelled,12,9800.0,10
+ORD-10050,2025-08-01,C010,P09,Farah Khan,Central,Retail,Completed,2,"₹11,200",10
+ORD-10192,02-Feb-2025,C012,P04,Anil Gupta  ,West,Online,Completed,17,882.0,20
+ORD-10436,03/05/2026,C015,P07,Divya Lakshmi,South,Partner,Completed,999,2800.0,0.15
+ORD-10171,2025-09-25,C050,P14,  Divya Lakshmi,South,Online,Completed,12,8670.0,20%
+ORD-10187,2026-01-03,C009,P04,Karthik Raja  ,South,Onlin,Cancelled,-10,900.0,5
+ORD-10091,09-Feb-2026,C034,P03,Lakshmi Narayan,Central,PARTNER,Completed,2,41000.0,15
+ORD-10142,2026-09-18,C004,P01,Karthik Raja,South,Retail,Completed,3,62000.0,20
+ORD-10443,2025-01-25,C037,P04,Arjun Mehta,North,Online,Completed,11,900.0,20
+ORD-10054,03/09/2026,C050,P15,Rahul Banerjee,EAST ,Partner,Completed,8,,15%
+ORD-10350,2026-01-19, C032 ,P04,Vikram Singh,North,Partner,Completed,12,900.0,0
+ORD-10367,27/10/2026,C052,P20,Pooja Desai,west,Online,Completed,10,7800.0,5
+ORD-10248,2026-09-19,C053,P01,Priya Nair,North,Retial,Completed,2,62000.0,10
+ORD-10421,13/12/2025,C032,P17,Anil Gupta,West,Retail ,COMPLETED,5,"₹16,500",15
+ORD-10238,26/10/2025,C008,P04,Amit Patil,west,Partner,Completed,11,882.0,5
+ORD-10067,2025-10-18,C010,P07,Vikram Singh,North,Retail,Completed,13,"₹2,856",20
+ORD-10299,14/09/2026,C040,P06,Suresh Babu,South,Online,Completed,13,2100.0,10%
+ORD-10213,02-Apr-2025,C031,P07,  Amit Patil,West,Retail,Completed,10,2800.0,0
+ORD-10108,2026-09-06,C058,P17,Pooja Desai,West,Online,Completed,2,16500.0,0.05
+ORD-10124,15/09/2024,C046,P12,Meera Joshi,West,Retail,Completed,7,15800.0,5
+ORD-10448,2026-06-13,C011,P06,  Divya Lakshmi,South,Online,Completed,11,2142.0,0%
+ORD-10396,21/07/2026, C035 ,P04,Amit Patil,West,Retail,Completed,12,882.0,20
+ORD-10022,02-Oct-2025,C024,P16,Vikram Singh,North,Partner,Completed,18,,15
+ORD-10485,23-Jul-2026,C029,P07,Farah Khan,Central,Online,Completed,13,"₹2,744",0%
+ORD-10302,12-Jun-2025,C026,P04,Priya Nair,North,Retail,Returned,8,900.0,10%
+ORD-10141,19-Mar-2026,C027,P09,Anil Gupta,West,Retail,completed,1,11424.0,10%
+ORD-10053,2024-09-10,C032,P04,  Divya Lakshmi,South,Online,Completed,10,₹900,5
+ORD-10297,16/03/2025,C039,P16,Amit Patil,West,Partner,Completed,9,"₹6,000",15
+ORD-10354,2026-07-17,C057,P17,Anil Gupta,West,Online,Completed,5,16500.0,10
+ORD-10472,26/03/2025,C033,P20,Divya Lakshmi,South,Online,Completed,4,7644.0,0.1
+ORD-10369,2026-05-26,C042,P12,ARJUN MEHTA,North,Retail,Completed,5,15800.0,0%
+ORD-10163,2026-08-27,c013,P04,Vikram Singh,North,Online,Completed,11,900.0,20
+ORD-10133,31/07/2026,C058,P07,Farah Khan,Central,Retail,Completed,11,2856.0,10
+ORD-10034,17/08/2026,C022,P08,Karthik Raja,South,Retail,Completed,2,18870.0,5
+ORD-10222,2024-10-16,C035,P20,Farah Khan,Central,Retail,Completed,15,7956.0,10
+ORD-10308,08-Jan-2026,C016,P01,Karthik Raja,South,Online,COMPLETED,3,60760.0,0.1
+ORD-10231,23-Jan-2024,C025,P04,Sneha Roy,East,Online,Returned,12,900.0,0.0
+ORD-10329,22-Oct-2025,C005,P02,Deepak Verma,Central,PARTNER,Completed,2,48000.0,10
+ORD-10157,2025-10-24, C058 ,P10,Karthik Raja,South,Online,Completed,2,29500.0,0
+ORD-10439,2026-07-22,C055,P05,Meera Joshi,West,Partner,Completed,14,3200.0,0
+ORD-10028,12-Jun-2024,C032,P19,Farah Khan,CENTRAL ,Retail,COMPLETED,3,58000.0,5%
+ORD-10397,13-Dec-2024,C041,P17,Meera Joshi,West,Partner,Completed,3,16500.0,0
+ORD-10152,23-Oct-2026,C048,P16,Divya Lakshmi,South,Retail,Completed ,7,6000.0,0
+ORD-10235,2026-06-26,C027,P04,Karthik Raja,South,Online,Completed,11,900.0,10
+ORD-10494,2026-05-31,C054,P05,Rahul Banerjee,East,Online ,Completed,14,3200.0,0
+ORD-10202,2026-06-09,C044,P20,Lakshmi Narayan,Central,Partner,Cancelled,12,7644.0,5
+ORD-10300,31/03/2024,C050,P05,Farah Khan  ,Central,ONLINE,Completed,13,,5%
+ORD-10150,2024-04-15,C035,P09,Arjun Mehta,North,Online,COMPLETED,4,"₹10,976",15
+ORD-10151,2026-05-17,C010,P12,Pooja Desai,West,Online,Completed,1,15800.0,5
+ORD-10048,02/01/2026,C038,P04,Deepak Verma,central,Retail,Completed,13,900.0,10
+ORD-10123,2024-12-08,C021,P01,ARJUN MEHTA,North,,Completed,6,"₹62,000",20
+ORD-10010,2025-03-14,C032,P07,Sneha Roy,East,Partner,Completed,10,2800.0,0.2
+ORD-10249,2025-04-23,C059,P09,Sneha Roy,east,online,Completed,1,11200.0,15
+ORD-10128,26/08/2024,C046,P14,POOJA DESAI,West,Online,Completed,10,"₹8,670",10
+ORD-10311,2024-09-23,C052,P05,Deepak Verma,Central,Online,Completed,15,"₹3,136",20
+ORD-10464,26/11/2025,C053,P18,Divya Lakshmi,south,Retail,Completed,13,9800.0,20
+ORD-10336,27/07/2024,C022,P04,Vikram Singh,NORTH ,Online,Completed,11,₹900,5%
+ORD-10102,29/08/2026,C024,P17,Arjun Mehta,North,Retail,Completed,1,16500.0,0.0
+ORD-10223,12/04/2026,C041,P15,Amit Patil  ,West,Online,Completed,21,2400.0,10
+ORD-10118,02-Jul-2026, C001 ,P15,Lakshmi Narayan,Central,Online,Completed,9,"₹2,352",5
+ORD-10200,10-Nov-2024,C044,P04,  Anil Gupta,West,Online,Completed,18,918.0,0.15
+ORD-10351,10-Nov-2024,C023,P04,Anil Gupta,West,Retail,Completed,12,918.0,0.1
+ORD-10224,25/11/2025,C008,P04,Pooja Desai,West,Online,Completed,11,918.0,0.05
+ORD-10446,03/12/2025,c015,P07,Priya Nair,North,Retail,Returned,9,"₹2,800",10%
+ORD-10225,08-Jan-2024,C060,P12,Amit Patil,West,Online,Completed,1,15800.0,5
+ORD-10440,15/04/2025,C014,P07,Suresh Babu,south,Retail,Completed,21,2744.0,0
+ORD-10270,2025-11-10,C041,P20,Deepak Verma,Central,Retail,COMPLETED,14,7800.0,10%
+ORD-10480,2026-11-08,C038,P12,Farah Khan,Central,Retail,Completed,2,16116.0,0.05
+ORD-10330,07/02/2026,C016,P16,Priya Nair,North,Retail,Cancelled,10,5880.0,15
+ORD-10063,18/09/2025,C043,P08,Deepak Verma,Central,Online,Completed,4,18130.0,0.05
+ORD-10196,23/07/2025,C005,P04,Farah Khan,Central,Online,Completed,12,882.0,15
+ORD-10314,2025-03-14,C049,P15,Pooja Desai, West,Retail,Completed,9,"₹2,400",10
+ORD-10435,2024-05-18, C013 ,P04,Sneha Roy,East,ONLINE,Completed,12,,0.2
+ORD-10019,08-Jan-2025,C030,P04,Anil Gupta,West,Partner,Completed,13,900.0,15
+ORD-10407,2026-02-02,C060,P14,Farah Khan,Central,Retail,Completed,13,8670.0,0.0
+ORD-10212,18-Feb-2025,C024,P11,Lakshmi Narayan,Central,Retail ,Completed,17,6272.0,10
+ORD-10377,2026-05-20,C043,P04,lakshmi narayan, Central,Online,Completed,17,882.0,10
+ORD-10001,2025-04-23,C051,P02,Divya Lakshmi,South,Partner,Completed,2,"₹48,960",0
+ORD-10061,02-Aug-2026,C021,P07,MEERA JOSHI,West,Online,Returned,12,2744.0,20
+ORD-10109,31-Dec-2025,C009,P14,Farah Khan,Central,Retail,Completed ,13,8670.0,0.1
+ORD-10303,2026-01-11,C017,P16,Divya Lakshmi,Sth,Partner,Completed,15,6000.0,10%
+ORD-10139,22-Mar-2024,c021,P05,Suresh Babu,South,Onlin,Completed ,8,"₹3,264",5
+ORD-10402,18/10/2024,C055,P05,  Priya Nair,North,ONLINE,Completed,6,"₹3,136",0
+ORD-10374,10/07/2024,C021,P08,anil gupta,West,Partner,completed,4,"₹18,500",5
+ORD-10416,10/12/2024,C052,P17,Anil Gupta,West,Partner,Returned,5,16830.0,5
+ORD-10373,2026-03-08,C059,P20,Anil Gupta,West,online,Cancelled,7,7800.0,5%
+ORD-10056,13-Jun-2025,C025,P07,Lakshmi Narayan,Central,partner,Completed ,9,2800.0,0.2
+ORD-10497,2025-02-20,C016,P05,Lakshmi Narayan,Central,Online,Completed,16,3200.0,0.1
+ORD-10478,28/10/2026,C045,P08,Pooja Desai,West,Retail,Completed ,2,18500.0,5
+ORD-10004,30-Aug-2026,C020,P06,Pooja Desai,West,Partner,Completed,10,"₹2,100",10
+ORD-10292,25/03/2024,C037,P15,Lakshmi Narayan,Central,Retail,Cancelled ,-10,2352.0,10
+ORD-10198,15/04/2025,c011,P14,Arjun Mehta,North,Online,Completed,11,8500.0,5
+ORD-10486,27/02/2025,C053,P15,Rahul Banerjee,East,partner,Completed,9,2448.0,5
+ORD-10049,2024-05-07,C054,P18,Lakshmi Narayan,Central,Online,Completed,11,9996.0,0
+ORD-10286,2026-07-18,C055,P05,Sneha Roy,east,ONLINE,CANCELLED,14,3200.0,10
+ORD-10043,2024-11-30,c030,P05,Farah Khan,Central,Online,Returned,10,3200.0,20
+ORD-10116,07/06/2025,C053,P15,Rahul Banerjee,East,online,Completed,8,"₹2,400",0
+ORD-10027,2024-11-26,C027,P05,Deepak Verma,Central,Partner,Completed,8,3264.0,0
+ORD-10404,11/04/2026,c044,P06,Farah Khan,Central,Partner,Returned,17,2142.0,5
+ORD-10089,06/09/2025,C018,P20,Divya Lakshmi,South,Online,Completed,17,7956.0,10
+ORD-10475,2024-07-04,C041,P06,Anil Gupta,West,,Completed,7,2100.0,0
+ORD-10287,2025-09-04,C034,P18,Amit Patil,West,Partner,Completed,14,9604.0,10
+ORD-10467,26/07/2024,C008,P04,Suresh Babu,South,Retail,Completed ,12,900.0,20
+ORD-10130,2026-07-14,C043,P17,Arjun Mehta, North,Partner,Completed,4,16830.0,10
+ORD-10013,09-Sep-2026,C024,P17,Pooja Desai,West,Partner,Completed,1,16170.0,0
+ORD-10425,15-May-2026,C050,P09,Vikram Singh,North,Online,Completed,2,11200.0,20
+ORD-10153,2025-08-30,C047,P12,Deepak Verma,Central,Online,Completed,4,15800.0,10
+ORD-10080,17/01/2025,C038,P04,  Vikram Singh,North,Retail ,Completed,14,882.0,0
+ORD-10280,2025-11-23,C036,P11,Priya Nair,North,Partner,Cancelled,15,6400.0,0%
+ORD-10077,2026-11-05,C026,P04,Karthik Raja,South,Retail,Completed,18,900.0,10
+ORD-10279,2025-05-15,C042,P09,Karthik Raja,South,Partner,Completed,4,11200.0,10
+ORD-10090,19/10/2024,C023,P18,Amit Patil,,Retail,Completed,16,"₹9,800",5
+ORD-10251,02-Apr-2026,C042,P15,Karthik Raja,South,Retail,COMPLETED,9,"₹2,448",15
+ORD-10175,03/06/2025,C045,P20,Pooja Desai,West,Online,Completed ,13,7800.0,15
+ORD-10298,06/06/2024,C002,P05,Lakshmi Narayan,Central,Partner,Completed,7,3200.0,15
+ORD-10371,2024-09-24,C058,P08,Lakshmi Narayan,Central,Retail,Completed,1,18500.0,0
+ORD-10025,19/08/2026,C002,P07,Arjun Mehta,North,Retail,Completed,10,2800.0,5
+ORD-10162,03/10/2024,C021,P14,Rahul Banerjee,east,Partner,Completed,9,8670.0,0%
+ORD-10408,02/10/2026,C032,P18,Divya Lakshmi,South,Retail,Returned,11,9800.0,10
+ORD-10183,23-Oct-2026,C026,P03,POOJA DESAI,West,Partner,Completed,2,41820.0,5
+ORD-10318,08-Jun-2024,C030,P10,Sneha Roy,East,Online,Completed,1,29500.0,0
+ORD-10120,2026-09-26,C021,P06,Lakshmi Narayan,Central,Partner,Completed,9,2100.0,10%
+ORD-10199,02-Dec-2025,C028,P09,Karthik Raja,South,Online,Completed ,2,11200.0,20
+ORD-10007,14/08/2025,C010,P06,PRIYA NAIR,north,Retail,Completed,8,2058.0,0
+ORD-10011,15-Oct-2024, C057 ,P17,Divya Lakshmi,Sth,Online,RETURNED,4,16500.0,10%
+ORD-10227,22/11/2024,c052,P04,Deepak Verma,CENTRAL ,Retail,Returned ,11,882.0,0
+ORD-10434,2025-08-28,C022,P20,Anil Gupta,West,Partner ,Completed,11,7800.0,5
+ORD-10169,01-Dec-2025,C005,P14,Karthik Raja,South,Online,Completed,5,8500.0,5%
+ORD-10082,20-Oct-2025,C022,P10,Deepak Verma,Central,Partner,Completed,4,29500.0,10
+ORD-10220,2024-08-20,C012,P09,Lakshmi Narayan,Central,Retail,Completed,4,11200.0,20%
+ORD-10347,2024-11-29,C002,P13,Anil Gupta,West,Partner,Completed,1,54000.0,0
+ORD-10282,2026-10-19,C012,P07,Farah Khan,Central,Online,Returned,13,2744.0,0%
+ORD-10437,14/07/2026,C030,P16,Sneha Roy,East,Retail,Cancelled,14,6000.0,0%
+ORD-10310,26-Jul-2024,c010,P03,Rahul Banerjee,East,Online,Completed,3,41000.0,5
+ORD-10243,29-Oct-2024,C016,P06,Amit Patil,West,Retail ,Completed,19,2100.0,5
+ORD-10352,10-Nov-2026,C005,P02,Rahul Banerjee,East,Online,Completed,4,47040.0,5%
+ORD-10242,14/06/2024,C021,P11,DEEPAK VERMA, Central,Partner,Completed,8,6400.0,0
+ORD-10263,2024-10-22,c025,P07,Anil Gupta,,Retail,Completed,18,2800.0,15%
+ORD-10421,13/12/2025,C032,P17,Anil Gupta,West,Retail ,COMPLETED,5,"₹16,500",15
+ORD-10284,07/07/2025,C009,P17,Pooja Desai,West,Retail,Completed,4,16830.0,5
+ORD-10460,24-Jul-2024,c017,P04,  Sneha Roy,East,Online,Returned,11,900.0,10
+ORD-10084,05-Jul-2024,C015,P06,Suresh Babu,South,Online,Completed,12,"₹2,058",5%
+ORD-10093,30-Jun-2026,C039,P15,Vikram Singh,North,Online,Completed,12,2448.0,5
+ORD-10046,12-Mar-2025,C023,P20,Divya Lakshmi,South,Online ,Completed,10,7800.0,15
+ORD-10322,2025-12-28,C042,P18,Amit Patil,west,Partner,Completed,16,9800.0,15%
+ORD-10047,2026-03-09,C004,P15,Sneha Roy,East,Online,Completed,9,2400.0,10
+ORD-10186,2026-06-30,C009,P18,Sneha Roy,East,Retail,Completed,14,9604.0,5
+ORD-10264,2026-08-31,C004,P05,Deepak Verma,Central,Online,Completed,16,3200.0,20
+ORD-10424,2025-06-13,C039,P06,Deepak Verma, Central,PARTNER,Completed,18,"₹2,100",10
+ORD-10274,29-Mar-2026,c060,P04,Karthik Raja,South,Retail,Completed,999,882.0,0.05
+ORD-10016,28-Apr-2026,C016,P09,Priya Nair,North,Retail,Completed,8,11424.0,20
+ORD-10337,09-Feb-2026,C054,P10,Vikram Singh,North,Retail,completed,1,29500.0,20
+ORD-10410,22-Oct-2025,C035,P06,Meera Joshi,West,Partner,Completed,20,2142.0,0
+ORD-10059,25-Aug-2025,C019,P02,Pooja Desai,West,Partner,Completed,3,47040.0,0%
+ORD-10490,2026-04-12,C032,P12,Divya Lakshmi,South,Online,Completed,2,15800.0,0.0
+ORD-10355,22/06/2026,C021,P02,Rahul Banerjee,East,Partner ,Completed,3,48000.0,10
+ORD-10060,26/08/2026,c056,P06,Amit Patil,West,,Completed,10,2100.0,5
+ORD-10454,2024-04-15,C017,P07,Karthik Raja,South,Online,Completed ,8,2800.0,5
+ORD-10040,16/03/2026,C006,P05,Lakshmi Narayan,Central,Partner,Cancelled,12,3136.0,10
+ORD-10317,2026-07-22,C001,P14,Karthik Raja,South,online,Cancelled ,14,8500.0,20
+ORD-10476,07/10/2025,C036,P05,Suresh Babu,South,Retail,completed,12,3264.0,15%
+ORD-10026,27/10/2026,C056,P12,Lakshmi Narayan,Central,Partner,Completed ,2,15484.0,0%
+ORD-10293,15/12/2025,C032,P05,Lakshmi Narayan,Central,Partner ,Completed,15,3200.0,5
+ORD-10431,29-May-2025,C054,P14,Suresh Babu,South,RETAIL,Completed,15,,10%
+ORD-10085,2025-07-20,C024,P10,Vikram Singh,North,Online,Completed,4,29500.0,15
+ORD-10062,2025-12-10,c021,P15,Farah Khan,Central,Partner,Completed,9,2400.0,15
+ORD-10052,12-Apr-2026,C036,P11,Rahul Banerjee,East,Online ,Cancelled,18,6400.0,10
+ORD-10346,2025-10-30,C001,P02,Farah Khan,Central,Online,Returned,3,48000.0,10%
+ORD-10306,14-Jan-2026,C033,P06,Suresh Babu,South,Onlin,completed,11,"₹2,142",0
+ORD-10445,18-Apr-2026,C040,P06,arjun mehta,North,Retail,Completed,8,2142.0,20
+ORD-10012,23-Jul-2026,C001,P02,SURESH BABU,south,Retail,Completed,3,48000.0,15
+ORD-10241,17/04/2026,C009,P15,Karthik Raja,South,Retail,Completed,11,2400.0,20
+ORD-10382,19-Jul-2026,C040,P05,Karthik Raja,South,Retail,Completed,13,3200.0,10
+ORD-10018,2025-07-14,C026,P03,Amit Patil,West,Retail,Cancelled,2,"₹40,180",0
+ORD-10383,2026-04-03,C012,P06,Rahul Banerjee,EAST ,Online,Completed,12,"₹2,100",5
+ORD-10068,21/02/2026,C054,P15,Sneha Roy,,Partner,Returned,8,"₹2,352",10
+ORD-10285,07-May-2026,C039,P02,Rahul Banerjee,East,Online,Completed,3,48000.0,5
+ORD-10125,17/11/2024,C007,P03,Sneha Roy,EAST ,Partner,Completed,3,41000.0,0
+ORD-10210,2024-03-10,C051,P09,Vikram Singh,North,partner,Completed,5,"₹11,200",0
+ORD-10499,01/03/2024,C029,P07,Arjun Mehta,North,PARTNER,Completed,12,2800.0,0%
+ORD-10097,2024-06-07,C016,P18,Anil Gupta,West,Online,Completed,9,9996.0,5
+ORD-10069,2025-03-31,C020,P05,Anil Gupta,West,Online,Completed,14,3200.0,0
+ORD-10340,08-Mar-2026,C027,P08,Suresh Babu, South,Onlin,Completed,2,18130.0,5
+ORD-10214,10/01/2025,C049,P04,Farah Khan, Central,Online,Completed,4,918.0,5
+ORD-10107,20/03/2024,C031,P14,Divya Lakshmi,South,Partne,Completed,9,8330.0,10
+ORD-10005,2024-03-18,C002,P07,Anil Gupta,West,ONLINE,Completed,7,2800.0,5
+ORD-10428,2025-10-02, C001 ,P04,Pooja Desai,west,Retail,Completed,13,918.0,0
+ORD-10103,2024-04-01, C003 ,P04,Karthik Raja,South,Online,Completed,13,882.0,20%
+ORD-10154,2026-04-27,c001,P04,anil gupta,West,Online,Cancelled,14,900.0,5
+ORD-10254,26/09/2024,c009,P03,Suresh Babu,South,Retail,Cancelled,6,"₹41,000",0
+ORD-10252,08-May-2025,C058,P08,Pooja Desai,,Online,completed,7,18500.0,5%
+ORD-10094,22/02/2025,C027,P06,Suresh Babu,South,Partner,Completed,13,2142.0,15
+ORD-10160,06/10/2026,C023,P14,Meera Joshi  ,West,PARTNER,Completed,13,8500.0,20
+ORD-10312,20/09/2026,C017,P13,Karthik Raja,South,Partne,Completed,1,54000.0,0.05
+ORD-10002,2025-10-16,C051,P10,Sneha Roy,East,Retail,Returned,4,29500.0,5
+ORD-10038,2024-01-13,C006,P20,Vikram Singh,North,Online,COMPLETED,16,7956.0,0.0
+ORD-10281,2026-05-22,C011,P07,  Pooja Desai,West,Online,Completed,14,2800.0,5
+ORD-10167,22/02/2026,C027,P09,ARJUN MEHTA,North,Retial,Completed,5,11424.0,15%
+ORD-10321,2025-04-22,C019,P16,Divya Lakshmi,South,Online,Completed,9,6000.0,5
+ORD-10003,2025-11-02,C044,P01,Sneha Roy,East,PARTNER,completed,2,63240.0,20
+ORD-10096,06/05/2026,C006,P15,arjun mehta,North,Partner,Completed,18,2400.0,0.0
+ORD-10024,06/02/2025,C057,P04,Suresh Babu,South,Partner,COMPLETED,13,900.0,15%
+ORD-10260,2026-01-17,c050,P12,Sneha Roy,East,Retail,Completed,4,15800.0,0
+ORD-10335,11-Jan-2026,C053,P07,Suresh Babu,South,ONLINE,Completed,10,2800.0,10
+ORD-10212,18-Feb-2025,C024,P11,Lakshmi Narayan,Central,Retail ,Completed,17,6272.0,10
+ORD-10134,27-Apr-2026,C011,P05,Priya Nair,North,Partne,Completed,10,3200.0,10
+ORD-10328,2024-12-25,C029,P18,Divya Lakshmi,South,Partner,Cancelled,9,9604.0,0.1
+ORD-10283,16/01/2025, C054 ,P02,Meera Joshi,West,Online,Completed ,5,"₹48,000",20
+ORD-10143,30/06/2026,C006,P09,  Suresh Babu, South,Retail,Completed,,11424.0,5
+ORD-10320,2025-06-06,C044,P11,Suresh Babu,South,Online,Completed,12,6528.0,0
+ORD-10455,25-Sep-2024,C036,P12,Anil Gupta,West,Retail,Completed,2,16116.0,0.1
+ORD-10230,24/04/2025,C052,P04,Rahul Banerjee,East,Partner,Completed,11,900.0,0
+ORD-10366,17/11/2024,C011,P04,meera joshi,West,Partner,Completed,9,900.0,5
+ORD-10247,2026-05-29,C022,P04,Divya Lakshmi,South,Retail,Completed ,19,918.0,10
+ORD-10433,2026-05-18,C058,P15,Arjun Mehta,North,Online,Completed,17,2400.0,10%
+ORD-10086,2026-06-05,C016,P10,Meera Joshi,West,ONLINE,Completed,5,"₹29,500",5
+ORD-10250,09-Feb-2025,C055,P11,Priya Nair,North,Retail,Completed,11,6272.0,5%
+ORD-10155,2024-10-15,C060,P08,Priya Nair,North,Online,Completed,4,18130.0,15
+ORD-10182,19-Jan-2025,C007,P06,Suresh Babu,South,online,Completed,13,2100.0,10
+ORD-10075,13-Dec-2025,C011,P05,Lakshmi Narayan,,Retail,Completed,9,3136.0,5
+ORD-10171,2025-09-25,C050,P14,  Divya Lakshmi,South,Online,Completed,12,8670.0,20%
+ORD-10493,2026-06-24,C049,P15,Pooja Desai,West,Retail,Completed,13,"₹2,400",20%
+ORD-10129,2025-04-12,C051,P08,Pooja Desai,West,Partner ,Completed,6,18500.0,15
+ORD-10393,02/08/2026, C025 ,P15,Rahul Banerjee,East,Partner,Completed,13,2352.0,15
+ORD-10021,20/05/2024,C030,P14,  Priya Nair,North,Partner,Completed,7,8500.0,5
+ORD-10364,26/01/2026,C030,P20,  Karthik Raja,South,Retail,Returned,4,7956.0,20
+ORD-10456,24-Aug-2025,C011,P08,Deepak Verma,central,Online,Completed,-2,18130.0,0.1
+ORD-10387,2026-07-02,C049,P17,  Priya Nair,North,Onlin,Cancelled,1,16500.0,5
+ORD-10292,25/03/2024,C037,P15,Lakshmi Narayan,Central,Retail,Cancelled ,-10,2352.0,10
+ORD-10098,2025-08-20,C028,P20,deepak verma,Central,Partner,Completed,9,7800.0,10%
+ORD-10319,31/08/2024,C036,P20,Suresh Babu,South,Online,completed,18,7800.0,5
+ORD-10483,30/12/2024,C009,P09,Anil Gupta, West,Online,Completed,2,10976.0,20
+ORD-10291,2025-10-01,C011,P04,Suresh Babu, South,Retial,Completed,15,900.0,5%
+ORD-10253,22-Oct-2025,c004,P09,Arjun Mehta,North,Retail,Cancelled,4,,0.05
+ORD-10070,2024-10-06,C047,P19,Meera Joshi,West,Retail ,Completed,1,,5%
+ORD-10088,2026-11-17,C008,P11,Amit Patil,West,Retail,Completed ,15,6400.0,15%
+ORD-10115,2026-05-20,C002,P04,Lakshmi Narayan,Central,Partner,CANCELLED,6,900.0,10
+ORD-10461,2025-09-24,C045,P05,divya lakshmi,South,Partner ,Completed,10,3200.0,0%
+ORD-10492,2024-12-05,C023,P04,  Divya Lakshmi,Sth,Online,Returned,14,900.0,0%
+ORD-10372,14-Aug-2024,C038,P05,Priya Nair,North,Online ,Completed,11,3200.0,10
+ORD-10197,25/04/2026,C035,P14,Suresh Babu,South,Online,Cancelled ,8,8500.0,0.05
+ORD-10168,2025-07-20,C023,P04,Sneha Roy,East,Online,Returned,16,900.0,0
+ORD-10105,2026-03-30,C054,P04,Karthik Raja,South,Partner,Returned,12,₹900,0.05
+ORD-10426,2024-11-08,C023,P11,Suresh Babu,South,Onlin,Completed,12,"₹6,400",10
+ORD-10192,02-Feb-2025,C012,P04,Anil Gupta  ,West,Online,Completed,17,882.0,20
+ORD-10078,25/02/2026,C034,P05,Karthik Raja,South,Partner,COMPLETED,10,3200.0,15
+ORD-10193,2024-12-06,C008,P10,Suresh Babu,South,Online,Completed,1,30090.0,10
+ORD-10055,2026-07-25,C045,P04,Meera Joshi,West,Retail ,Completed,13,900.0,10
+ORD-10020,20-Oct-2026,C032,P09,suresh babu,South,online,Completed,3,"₹10,976",5
+ORD-10481,2026-01-16,C033,P11,Amit Patil,West,Retail,Completed,9,6400.0,0.0
+ORD-10179,02/07/2025,C053,P07,Anil Gupta,West,Partner,Completed ,12,2800.0,0.1
+ORD-10258,02/06/2025,C028,P11,Priya Nair,,Online,Completed,8,6528.0,5
+ORD-10256,2026-01-02,C059,P08,Sneha Roy,East,Partner,Completed,6,,5
+ORD-10216,2026-11-12,C038,P05,Vikram Singh, North,Partner,Cancelled,,3136.0,5
+ORD-10420,2026-05-03,C029,P03,Amit Patil,West,Online,Completed,1,40180.0,5%
+ORD-10194,17/04/2025,c032,P11,farah khan,Central,Retail,Completed,12,6400.0,0
+ORD-10131,2025-01-09,C037,P14,Farah Khan,Central,Online,Completed,13,8500.0,0
+ORD-10465,17/09/2025,C017,P18,Divya Lakshmi  ,South,Retail,Completed,15,"₹9,800",15
+ORD-10101,19-Mar-2025,C032,P04,Suresh Babu,South,Partner,Completed,12,₹900,0%
+ORD-10172,06/04/2024,C038,P10,Vikram Singh,North,retail,COMPLETED,6,30090.0,5
+ORD-10444,02/03/2026,C060,P19,Arjun Mehta,North,Onlin,Completed,3,56840.0,0.0
+ORD-10441,15-Sep-2025,C027,P15,DIVYA LAKSHMI,South,Partner,Completed,13,"₹2,352",5
+ORD-10468,14/04/2024,C044,P19,Sneha Roy,East,Partner,Completed,3,59160.0,0.05
+ORD-10144,2025-12-01,C058,P01,Lakshmi Narayan, Central,retail,Completed,4,62000.0,20
+ORD-10359,12-Dec-2025,C056,P04,Divya Lakshmi,South,Partner,Completed,8,918.0,5
+ORD-10341,2025-05-11,C052,P15,DEEPAK VERMA,Central,Online,Completed,9,2352.0,5
+ORD-10203,2024-10-11,C036,P06,LAKSHMI NARAYAN,Central,Online,COMPLETED,10,2100.0,10
+ORD-10201,2026-08-11,C033,P10,Sneha Roy,East,partner,COMPLETED,2,29500.0,0%
+ORD-10316,25/03/2026,C036,P08,  Anil Gupta,West,Retail,Completed,3,"₹18,500",10
+ORD-10149,2025-05-08,c054,P08,Arjun Mehta,North,Partner,Completed,4,"₹18,500",5
+ORD-10269,21-Sep-2026,C025,P16,Deepak Verma  ,Central,Retail,Completed,15,6000.0,15
+ORD-10122,2025-07-16,C041,P13,anil gupta,WEST ,Online,Completed,2,54000.0,0.15
+ORD-10137,05/07/2025,C047,P11,Vikram Singh,North,Retail,Completed,,6400.0,15%
+ORD-10240,2026-01-08,C026,P05,Rahul Banerjee, East,Online,Completed ,13,3264.0,10
+ORD-10453,2025-06-25,C052,P08,Pooja Desai,West,Online,Completed,3,18500.0,10
+ORD-10058,2024-09-25,C058,P16,Deepak Verma,Central,Online,Completed,11,6000.0,0
+ORD-10195,15/10/2025,C032,P16,Arjun Mehta,North,Online,Completed ,10,5880.0,15
+ORD-10271,13-Oct-2025,C046,P09,divya lakshmi,South,Retail,Completed,2,11200.0,5
+ORD-10395,22/10/2025,C020,P03,Deepak Verma, Central,Retail,COMPLETED,2,,5
+ORD-10064,2025-11-19,c038,P01,anil gupta,West,Partner,Completed,6,62000.0,0
+ORD-10071,24-May-2024,C004,P04,Vikram Singh,North,Online,Completed,13,900.0,0.2
+ORD-10380,06-May-2025,C001,P20,Lakshmi Narayan,central,Online,Completed,7,"₹7,800",5%
+ORD-10272,02/03/2026,C005,P04,Priya Nair,North,Retail,Completed,8,₹882,20%
+ORD-10413,14-Apr-2025,C017,P09,Sneha Roy, East,Retail,completed,3,11200.0,15
+ORD-10267,2026-04-08,C012,P19,Deepak Verma,central,ONLINE,Completed,1,58000.0,5
+ORD-10376,2026-08-23,C006,P05,Arjun Mehta,North,Partner,Completed,9,3200.0,0.05
+ORD-10379,18/08/2025,C021,P12,Arjun Mehta,NORTH ,Retail,Completed,2,15800.0,20
+ORD-10170,2026-04-23,c059,P11,Suresh Babu,South,ONLINE,Completed,12,6528.0,0
+ORD-10037,2025-05-03,C050,P04,RAHUL BANERJEE,East,Partner,Completed,16,₹900,0.05
+ORD-10244,2026-09-25,C058,P03,Karthik Raja, South,Online,Completed,6,41000.0,0.05
+ORD-10083,2026-08-16, C004 ,P14,SURESH BABU,South,Online,Cancelled,12,8500.0,0.05
+ORD-10261,14-Oct-2026,C055,P14,Rahul Banerjee  , East,Partner,Completed,11,"₹8,670",0
+ORD-10349,2024-04-28,c010,P07,Karthik Raja,South,Onlin,Returned,10,2800.0,0
+ORD-10466,18-Aug-2026,c046,P15,Deepak Verma,Central,Online ,Completed,11,2400.0,0
+ORD-10023,29/10/2026,c029,P16,Sneha Roy,East,Partner,Completed,9,6120.0,10
+ORD-10338,01/06/2024,C008,P06,Deepak Verma,Central,Partne,Completed,14,2058.0,0
+ORD-10309,24/04/2026,C049,P15,Vikram Singh,North,Retail,Completed,15,2400.0,5
+ORD-10479,04-Aug-2025, C040 ,P07,Amit Patil,West,ONLINE,Completed,14,2744.0,0
+ORD-10240,2026-01-08,C026,P05,Rahul Banerjee, East,Online,Completed ,13,3264.0,10
+ORD-10221,2025-09-21,C030,P04,anil gupta,West,Partner,Completed ,13,918.0,0
+ORD-10014,2026-06-12,C056,P16,Vikram Singh,North,Online,Completed,15,6000.0,5
+ORD-10394,2025-05-22,C022,P04,  Pooja Desai, West,Partner,Completed,7,900.0,15
+ORD-10161,08-Sep-2025,C035,P14,meera joshi,West,Online,Completed ,15,8500.0,0.0
+ORD-10073,26/11/2025,C016,P15,Arjun Mehta,North,Partner,Completed,16,"₹2,400",15
+ORD-10178,07-Feb-2025,C040,P02,Anil Gupta  ,West,Retail,Completed,4,48000.0,10
+ORD-10277,2024-06-10, C043 ,P07,Amit Patil,West,ONLINE,Completed,16,"₹2,856",15
+ORD-10368,2025-05-05,C051,P14,SNEHA ROY,East,Retail,Returned,12,8670.0,0%
+ORD-10036,23/03/2024,C043,P13,Priya Nair,north,Partner,Cancelled ,1,54000.0,0.1
+ORD-10327,01/08/2026,C015,P16,Arjun Mehta,North,Online,Completed,11,6000.0,10
+ORD-10208,06/03/2026,C009,P18,Pooja Desai,West,Partner,Cancelled,6,,0.15
+ORD-10226,15-Apr-2026,C047,P07,Karthik Raja,South,Retail,Completed,17,2800.0,0.05
+ORD-10121,2024-06-30,C031,P14,  Deepak Verma,Central,Retail,Completed,9,8500.0,5
+ORD-10217,2026-11-09, C009 ,P08,Pooja Desai,west,Online,Completed,2,18130.0,0
+ORD-10030,02-Aug-2026,C055,P18,Amit Patil,West,Partner ,Completed,15,"₹9,996",20%
+ORD-10348,2024-12-07,C045,P04,Pooja Desai,West,Online,COMPLETED,8,900.0,15
+ORD-10189,15/04/2026,C036,P18,DIVYA LAKSHMI,South,Online,Completed,14,9996.0,5
+ORD-10471,02/08/2025,C033,P05,Divya Lakshmi,South,RETAIL,completed,15,3200.0,10%
+ORD-10326,2024-10-26,C012,P15,Farah Khan, Central,Online,Returned,15,2448.0,20
+ORD-10181,2024-06-21,C037,P02,SURESH BABU, South,Online ,Completed,4,47040.0,5
+ORD-10234,27-Jun-2025,C029,P18,Meera Joshi,West,Online,Completed,10,9800.0,0%
+ORD-10418,01/05/2026, C040 ,P07,Lakshmi Narayan,Central,Partner,Completed,15,2800.0,0.0
+ORD-10406,2026-01-31,C019,P17,Amit Patil,West,retail,Completed,2,16830.0,20
+ORD-10166,2024-03-27,C021,P14,  Suresh Babu,South,retail,COMPLETED,7,8500.0,5
+ORD-10127,24/02/2026,C043,P14,Divya Lakshmi,South,Partner ,cancelled,13,8500.0,5
+ORD-10491,2025-09-02,C010,P06,Farah Khan,CENTRAL ,Partner,completed,4,2142.0,5
+ORD-10265,10/09/2026,C034,P11,Farah Khan,Central,Partne,Completed,12,6400.0,0.15
+ORD-10065,2025-08-24,C011,P04,Rahul Banerjee,East,Online ,Completed,11,918.0,5
+ORD-10430,2026-05-10,c057,P05,Anil Gupta,West,Partne,Completed ,10,3136.0,10
+ORD-10215,23-Feb-2026,C001,P04,Suresh Babu,South,Retail,Completed,17,900.0,0
+ORD-10449,13-Apr-2026,C017,P15,Lakshmi Narayan,,Partner,COMPLETED,,2448.0,10
+ORD-10385,2024-06-22,C047,P04,Meera Joshi,West,Online,Returned ,11,918.0,5
+ORD-10339,09/04/2025,C032,P06,Vikram Singh,North,Retail,Completed,13,"₹2,100",0.05
+ORD-10429,29/04/2026,C046,P07,Sneha Roy,east,Partner,Completed,9,2800.0,10%
+ORD-10176,19/01/2026, C023 ,P09,Suresh Babu,South,PARTNER,Completed,1,10976.0,15
+ORD-10399,31-Oct-2026,C047,P18,Priya Nair,,Partner,completed,12,9604.0,10%
+ORD-10422,03/08/2024,C027,P15,Vikram Singh,North,Partner,Completed,10,2400.0,5
+ORD-10173,12/12/2025,C010,P15,Priya Nair,North,Online,Completed,16,2352.0,0.05
+ORD-10333,23-Aug-2026,C049,P09,Karthik Raja,South,ONLINE,Completed,3,11424.0,5
+ORD-10033,2025-12-06,C003,P17,  Anil Gupta,West,Retail,COMPLETED,5,16500.0,0
+ORD-10032,2025-01-26,C025,P01,Meera Joshi,west,Retail ,Completed,3,60760.0,0.0
+ORD-10233,14/03/2026,C049,P15,Meera Joshi,West,Retail,Completed,9,2352.0,5
+ORD-10236,30/06/2024,C059,P14,Priya Nair,North,,Returned,12,8500.0,5
+ORD-10375,22-Feb-2026,C029,P02,Priya Nair,North,Online,Completed,3,,0.0
+ORD-10398,2024-06-18,C042,P07,Rahul Banerjee,East,Partner,Completed,12,2856.0,15
+ORD-10409,2025-10-22,C033,P11,Vikram Singh,North,Partner,Completed,13,6528.0,5
+ORD-10188,2024-03-30,C018,P20,Anil Gupta,West,Partner,Returned,7,7956.0,10
+ORD-10174,2024-07-23,C021,P14,Vikram Singh, North,Online,COMPLETED,13,8670.0,10%
+ORD-10419,03/10/2025,C021,P08,Lakshmi Narayan, Central,Retail,Completed ,1,18500.0,0.2
+ORD-10390,2024-03-04,c060,P06,Deepak Verma,Central,Retail,completed,18,2058.0,0.15
+ORD-10482,17/07/2026, C019 ,P04,Divya Lakshmi,South,online,Completed,14,882.0,0
+ORD-10304,2026-06-11,C032,P02,Anil Gupta,west,ONLINE,Completed,5,48000.0,0.05
+ORD-10039,28/02/2026,C050,P08,Karthik Raja,SOUTH ,Retail,Completed,2,18130.0,5
+ORD-10266,2025-05-25,C019,P15,RAHUL BANERJEE,East,Online,Completed,12,2352.0,10
+ORD-10458,2026-08-17,C036,P15,Anil Gupta  ,West,Partner,Completed,12,2400.0,10
+ORD-10015,2024-07-15,C012,P12,Deepak Verma, Central,Partner ,Completed ,4,15800.0,0.2
+ORD-10095,12-Jan-2025,c016,P04,Meera Joshi,west,Partner,Completed ,11,882.0,0.05
+ORD-10017,03-Dec-2024,C036,P05,Sneha Roy,east,Online,Completed ,10,3200.0,5%
+ORD-10392,16/06/2026,C050,P19,Deepak Verma,Central,Online,Completed,7,59160.0,15
+ORD-10342,2025-12-24,c037,P08,Arjun Mehta,North,Retail,Completed,6,18500.0,0
+ORD-10218,11/11/2026,C037,P19,Meera Joshi,West,Retail,Returned,3,"₹56,840",0%
+ORD-10290,2024-10-12,c033,P09,Suresh Babu,South,Online,Completed,4,"₹11,200",5
+ORD-10414,28-Aug-2025,C014,P06,Rahul Banerjee,East,ONLINE,Completed ,14,2100.0,10
+ORD-10500,29-Aug-2025,C055,P12,Vikram Singh,North,Retail,Returned,2,"₹15,800",0.1
+ORD-10079,13/09/2026,C060,P04,Arjun Mehta,North,Retail,Completed,14,918.0,10
+ORD-10092,20-Jun-2026,C021,P07,deepak verma,CENTRAL ,Online,Completed,11,2800.0,0.2
+ORD-10388,14-Jan-2026,C029,P10,Amit Patil,West,Online,Completed ,2,29500.0,10%
+ORD-10184,12/06/2025,C019,P07,Pooja Desai,West,Partner ,Completed,16,2800.0,0
+ORD-10381,2026-08-28,C039,P14,Karthik Raja,SOUTH ,Partner,Returned,9,8500.0,5
+ORD-10324,2024-06-13,C033,P17,Pooja Desai,West,Partner,Completed,4,16170.0,20%
+ORD-10268,26/08/2025,C035,P03,Rahul Banerjee,east,RETAIL,Completed,1,41000.0,0
+ORD-10191,31-Mar-2025,C019,P05,Meera Joshi,West,Partner,Returned,18,3264.0,0.15
+ORD-10498,11-Dec-2025,C057,P20,Vikram Singh  , North,Partner,Completed,13,7644.0,10
+ORD-10110,15-Oct-2026,C042,P17,pooja desai,West,Online,Completed,3,16500.0,5
+ORD-10365,2024-10-21,C004,P01,vikram singh,North,Retail,Completed,2,60760.0,10
+ORD-10357,02/10/2024,C012,P12,Pooja Desai  ,West,Partner,Completed,4,,0
+ORD-10136,15-Sep-2026,c057,P04,Karthik Raja,Sth,PARTNER,Completed,17,900.0,5
+ORD-10246,17-Sep-2025,C016,P06,SNEHA ROY,East,Online,Completed ,12,2058.0,0
+ORD-10370,22/06/2025,C022,P04,Lakshmi Narayan,Central,Partner,Cancelled,11,882.0,15
+ORD-10275,23/01/2026,C019,P14,Karthik Raja, South,PARTNER,Completed,10,8500.0,20
+ORD-10148,24-May-2024,C025,P07,Anil Gupta,West,ONLINE,Completed,13,2744.0,5
+ORD-10106,2026-07-11,C026,P05,Pooja Desai,West,partner,Completed,13,3136.0,20
+ORD-10295,10-Jun-2024,C033,P09,Sneha Roy,east,Retail,Completed,4,11200.0,20
+ORD-10325,29/10/2026,C012,P15,  Anil Gupta,West,Partner ,Completed,12,2400.0,15
+ORD-10259,08/09/2026,C046,P05,  Suresh Babu,South,Partner,Completed,15,3200.0,0
+ORD-10288,26-Nov-2025,C032,P15,Lakshmi Narayan,Central,Retail,Cancelled,11,2400.0,10
+ORD-10489,2026-03-19,C017,P05,Karthik Raja,South,Online,Completed,12,,0
+ORD-10180,10-Nov-2024,C056,P08,Amit Patil,West,RETAIL,Completed,4,18870.0,0.05
+ORD-10362,2024-12-12,C030,P02,  Suresh Babu,South,Online,Completed,3,48000.0,0.0
+ORD-10165,2025-12-11,c016,P14,Anil Gupta,West,Retail ,Completed ,17,8670.0,0
+ORD-10111,2026-03-15,C028,P06,Vikram Singh,North,Partner,Completed,8,2100.0,10
+ORD-10389,2025-08-17,C055,P10,Divya Lakshmi,South,ONLINE,Completed,1,28910.0,0
+ORD-10257,2026-03-24,C007,P05,RAHUL BANERJEE,East,Partner,Completed,11,3200.0,20
+ORD-10315,2024-10-16, C020 ,P01,Amit Patil,West,Online,Completed,3,"₹63,240",0
+ORD-10006,11/02/2026,C044,P18,Meera Joshi,West,Online,Completed,15,9800.0,10%
+ORD-10463,2025-12-23,C002,P07,PRIYA NAIR,North,Online,completed,10,2856.0,10
+ORD-10145,26/10/2024,C004,P15,Lakshmi Narayan  ,Central,partner,Completed,14,2352.0,10
+ORD-10104,05-Dec-2025,C019,P15,Priya Nair,North,Online,Completed,16,2400.0,10%
+ORD-10211,24/02/2025,C041,P20,Rahul Banerjee,East,Retail,Completed,10,7800.0,5
+ORD-10386,2026-07-17,C006,P03,Rahul Banerjee,East,Partner,COMPLETED,1,40180.0,10
+ORD-10131,2025-01-09,C037,P14,Farah Khan,Central,Online,Completed,13,8500.0,0
+ORD-10042,2025-11-03,C030,P15,Karthik Raja,South,Online,Cancelled,12,2352.0,10
+ORD-10363,26/02/2026,C020,P14,  Pooja Desai,West,Retail,Completed,10,8330.0,20%
+ORD-10138,22-Aug-2026,C022,P18,ARJUN MEHTA,North,Retail,Cancelled,13,"₹9,996",0.1
+ORD-10378,2024-08-08,C026,P18,Sneha Roy,East,Retail,Completed,14,9604.0,10
+ORD-10255,10-Nov-2026,c030,P08,Amit Patil,west,Online,Completed,4,18500.0,5
+ORD-10147,09-Nov-2026,C056,P05,  Meera Joshi,West,Online ,Completed,14,3200.0,5%
+ORD-10126,30/07/2026,C047,P11,sneha roy,East,Partner,Completed,15,"₹6,528",10
+ORD-10087,2026-09-05,C050,P04,  Deepak Verma,Central,Online,Completed,10,900.0,0
+ORD-10469,28/03/2024,C056,P05,  Lakshmi Narayan,Central,Partner,Completed,12,3200.0,0
+ORD-10031,2026-02-05,C054,P05,Divya Lakshmi,south,Online,Completed,8,3200.0,0.0
+ORD-10432,09/10/2026,C029,P10,Anil Gupta,West,Online,Completed,3,29500.0,0
+ORD-10066,2024-11-29, C040 ,P11,divya lakshmi,South,Retail,COMPLETED,7,6400.0,10%
+ORD-10204,11/11/2026,C044,P04,PRIYA NAIR,North,Online,Completed,9,900.0,0
+ORD-10206,2026-08-14,C014,P08,Vikram Singh,North,Online,Completed,2,18870.0,0
+ORD-10045,2025-02-01,C025,P04,Pooja Desai  ,WEST ,Online,Completed,10,918.0,5
+ORD-10028,12-Jun-2024,C032,P19,Farah Khan,CENTRAL ,Retail,COMPLETED,3,58000.0,5%
+ORD-10081,2025-12-24,C003,P04,Pooja Desai,West,ONLINE,Completed,18,900.0,20
+ORD-10488,11/05/2026,C002,P05,Suresh Babu,South,Partne,Completed,9,3200.0,10
+ORD-10438,02/04/2024,c041,P06,  Vikram Singh,North,Online,Completed,13,2100.0,10
+ORD-10114,22-Aug-2025,C052,P05,Vikram Singh,North,Partner,Completed,9,3136.0,0
+ORD-10400,08/10/2024,c028,P17,Amit Patil  ,West,Retail,Completed,4,"₹16,500",0.0
+ORD-10205,2025-06-16,C052,P03,Vikram Singh,North,Partner,Completed,3,40180.0,10
+ORD-10008,2024-03-03,c035,P18,Arjun Mehta,North,Partner,Completed,14,9800.0,0%
+ORD-10209,2025-07-30,C007,P05,Divya Lakshmi,SOUTH ,Online,Completed,10,3264.0,20
+ORD-10159,2026-06-15,C050,P04,Farah Khan,Central,Online,Cancelled,10,900.0,0%
+ORD-10113,2024-11-07,C018,P06,Divya Lakshmi,South,Retail,Completed,13,2058.0,10%
+ORD-10412,09-Jan-2025,C039,P04,Lakshmi Narayan,Central,online,COMPLETED,10,900.0,0
+ORD-10447,2024-09-12,C027,P16,Farah Khan,Central,Online,Completed,13,,0
+ORD-10232,2026-04-08,C014,P18,Arjun Mehta,NORTH ,Partner,Completed,13,9800.0,5
+ORD-10229,2026-05-18,C046,P11,Priya Nair,North,Partner,Cancelled,12,6528.0,5%
+ORD-10009,2024-02-25,C040,P05,  Divya Lakshmi,South,Partner,Completed,13,3200.0,15
+ORD-10074,2024-12-24,C002,P05,  Sneha Roy, East,Partner,Completed,8,3200.0,5%
+ORD-10401,02-Jan-2026,C051,P14,Priya Nair,North,Partner,Completed,11,8500.0,5
+ORD-10119,05/07/2025,C060,P04,Sneha Roy, East,Partner,Completed,10,900.0,10
+ORD-10487,31/10/2024,C034,P10,Lakshmi Narayan,Central,RETAIL,Cancelled,4,28910.0,0.2
+ORD-10190,2025-02-23,C017,P06,Suresh Babu,South,Online,Completed,13,2142.0,20
+ORD-10496,2026-04-08,C025,P01,Amit Patil,West,Partner,Completed,4,63240.0,20
+ORD-10207,10-May-2025,C023,P08,Farah Khan,,Partner,Completed,3,18500.0,20%
+ORD-10356,11-Aug-2024, C011 ,P12,Arjun Mehta,North,Partner,completed,4,15800.0,20
